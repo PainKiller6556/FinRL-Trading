@@ -127,7 +127,7 @@ def DRL_prediction(df,
             # print(env_test.render())
             last_state = env_trade.render()
 
-    df_last_state = pd.DataFrame({'last_state': last_state})
+    df_last_state = pd.DataFrame({'last_state': last_state}, index=[0])
     df_last_state.to_csv('results/last_state_{}_{}.csv'.format(name, i), index=False)
     return last_state
 
